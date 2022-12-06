@@ -23,12 +23,100 @@
 body {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.125rem;
+  background-image: url("./images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 45vw 100vh;
+
+  /* To eddit these */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+p {
+  color: var(--darkgrayviolet);
+}
+
+.btn {
+  border: none;
+  color: var(--white);
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border-radius: 4px;
+  background-color: var(--verydarkviolet);
+  margin-top: 1.5rem;
+  transition: background-color 200ms ease-in;
+}
+
+.btn:hover {
+  color: var(--verydarkviolet);
+  background-color: var(--darkgrayviolet);
+}
+
+main {
+  max-width: 2000px;
+  width: 95%;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  gap: 3rem;
+}
+
+/* Styling Form */
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 95%;
+}
+
+input {
+  cursor: pointer;
+  height: 2rem;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+input[type="number"] {
+}
+
+/* Styling Form */
+
+/* Thanks Section */
+.thanks {
+  display: none;
+  text-align: center;
+}
+
+.thanks__title {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  padding-block: 1rem;
+}
+
+/* Thanks Section */
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url("./images/bg-main-mobile.png");
+    background-size: 100vw 40vh;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-size: 35vw 100vh;
+  }
 }
