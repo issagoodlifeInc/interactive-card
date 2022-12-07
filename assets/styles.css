@@ -34,10 +34,6 @@ body {
   min-height: 100vh;
 }
 
-p {
-  color: var(--darkgrayviolet);
-}
-
 .btn {
   border: none;
   color: var(--white);
@@ -56,8 +52,7 @@ p {
 }
 
 main {
-  max-width: 2000px;
-  width: 95%;
+  width: min(80ch, 100vw - 2rem);
   margin: 0 auto;
   align-items: center;
   display: flex;
@@ -67,9 +62,8 @@ main {
 /* Styling Form */
 
 form {
-  max-width: 400px;
+  width: min(400px, 95%);
   margin: 0 auto;
-  width: 95%;
 }
 
 input {
@@ -86,6 +80,69 @@ input[type="number"] {
 
 /* Styling Form */
 
+/* Img Cards */
+.card__imgs {
+  width: max(375px, 40%);
+  color: var(--white);
+  position: relative;
+}
+
+.card__imgs img {
+  width: 100%;
+}
+
+.back__card img {
+  padding-block-start: 2rem;
+  transform: translateX(5rem);
+}
+
+.card__number,
+.front__bottom {
+  padding-inline: 1.4rem;
+}
+
+.card__number,
+.card__cvc {
+  position: absolute;
+}
+
+.card__number {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  top: 7rem;
+}
+
+.front__bottom {
+  display: flex;
+  transform: translateY(-3rem);
+  justify-content: space-between;
+  color: var(--lightgrayviolet);
+  font-size: 1rem;
+}
+
+.card__name {
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.front__card::before {
+  position: absolute;
+  top: 1rem;
+  left: 1.4rem;
+  content: "";
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: var(--lightgrayviolet);
+}
+
+.card__cvc {
+  bottom: 6rem;
+  right: -1.6rem;
+}
+
+/* Img Cards */
+
 /* Thanks Section */
 .thanks {
   display: none;
@@ -99,6 +156,9 @@ input[type="number"] {
   padding-block: 1rem;
 }
 
+.thanks__body {
+  color: var(--darkgrayviolet);
+}
 /* Thanks Section */
 .attribution {
   font-size: 11px;
