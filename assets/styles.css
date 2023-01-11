@@ -88,7 +88,7 @@ input[type="number"] {
 }
 
 .card__imgs img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .back__card img {
@@ -168,14 +168,28 @@ input[type="number"] {
   color: hsl(228, 45%, 44%);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (width < 600px) {
   body {
     background-image: url("./images/bg-main-mobile.png");
     background-size: 100vw 40vh;
   }
+
+  main {
+    flex-direction: column;
+  }
+
+  .back__card {
+    position: absolute;
+    top: -10rem;
+    z-index: -2;
+  }
+
+  .back__card img {
+    transform: translateX(4rem);
+  }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (width > 1000px) {
   body {
     background-size: 35vw 100vh;
   }
