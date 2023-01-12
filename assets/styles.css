@@ -86,17 +86,26 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.cvc__expdetails {
+.exp__cvcinputs {
   display: flex;
-  gap: 0.2rem;
+  gap: 2rem;
+}
+
+.exp__cvclabels {
+  display: flex;
+  gap: 2.5rem;
 }
 
 .cvc__expdetails > label {
   display: block;
 }
 
-.cvc__expdetails > input {
+.exp__cvcinputs > input {
   max-width: 4rem;
+}
+.exp__cvcinputs > input:last-child {
+  max-width: 7rem;
+  justify-self: flex-end;
 }
 
 /* Styling Form */
