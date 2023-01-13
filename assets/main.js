@@ -10,18 +10,18 @@ let inputMonth = document.getElementById("expiryMonth");
 let inputYear = document.getElementById("expiryYear");
 let inputCVC = document.getElementById("cvc");
 
-inputName.addEventListener("change", () => {
+inputName.addEventListener("keyup", () => {
   cardName.textContent = inputName.value;
 });
-inputCardNum.addEventListener("change", () => {
+inputCardNum.addEventListener("keyup", () => {
   cardNumber.textContent = inputCardNum.value;
 });
-inputMonth.addEventListener("change", () => {
+inputMonth.addEventListener("keyup", () => {
   cardExpMonth.textContent = inputMonth.value;
 });
-inputYear.addEventListener("change", () => {
+inputYear.addEventListener("keyup", () => {
   cardExpYear.textContent = inputYear.value;
 });
-inputCVC.addEventListener("change", () => {
+inputCVC.addEventListener("keyup", () => {
   cardCVC.textContent = inputCVC.value;
 });
