@@ -9,7 +9,10 @@
 :root {
   /* ### Primary */
 
-  --lgradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%); /*(active input border)*/
+  --lgradient: linear-gradient(
+    to right hsl(249, 99%, 64%),
+    hsl(278, 94%, 30%)
+  ); /*(active input border)*/
   --red: hsl(0, 100%, 66%); /*(input errors)*/
 
   /* ### Neutral */
@@ -76,6 +79,13 @@ input {
   font-family: inherit;
   margin-block: 0.4rem;
   outline: 0;
+  border: 1px solid var(--darkgrayviolet);
+  border-radius: 10px;
+}
+
+input:hover,
+input:focus {
+  border: 1.5px solid hsl(278, 94%, 30%);
 }
 
 input[type="text"],
@@ -124,6 +134,7 @@ form label {
 
 .card__imgs img {
   max-width: 100%;
+  display: block;
 }
 
 .back__card img {

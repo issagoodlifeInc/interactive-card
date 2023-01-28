@@ -14,7 +14,10 @@ inputName.addEventListener("keyup", () => {
   cardName.textContent = inputName.value;
 });
 inputCardNum.addEventListener("keyup", () => {
-  cardNumber.textContent = inputCardNum.value;
+  cardNumber.textContent = inputCardNum.value
+    .replace(/[^0-9]/gi, "")
+    .replace(/(.{4})/g, "$1 ")
+    .trim();
 });
 inputMonth.addEventListener("keyup", () => {
   cardExpMonth.textContent = inputMonth.value;
