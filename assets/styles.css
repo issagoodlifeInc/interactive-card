@@ -113,6 +113,17 @@ form label {
   font-size: 0.7rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+  position: relative;
+}
+
+form label::after {
+  content: "Wrong Format, numbers only";
+  position: absolute;
+  width: 100%;
+  text-transform: capitalize;
+  display: block;
+  bottom: -4rem;
+  color: var(--red);
 }
 
 .exp__cvcinputs > input {
