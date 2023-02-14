@@ -218,6 +218,7 @@ form label {
 }
 /* Thanks Section */
 .attribution {
+  margin-block-start: 1rem;
   font-size: 11px;
   text-align: center;
 }

@@ -1,7 +1,7 @@
 let cardNumber = document.querySelector(".card__number");
 let cardName = document.querySelector(".card__name");
-let cardExpMonth = document.querySelector(".card__exp");
-let cardExpYear = cardExpMonth.querySelector("span");
+let cardExpMonth = document.querySelector(".card__exp-month");
+let cardExpYear = document.querySelector(".card__exp-year");
 let cardCVC = document.querySelector(".card__cvc");
 
 let inputName = document.getElementById("name");
