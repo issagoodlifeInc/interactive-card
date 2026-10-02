@@ -246,6 +246,7 @@ input[aria-invalid="true"] {
 
 .thanks {
   text-align: center;
+  margin: 0 auto;
 }
 
 .thanks[hidden],
@@ -279,6 +280,9 @@ input[aria-invalid="true"] {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+.attribution a:hover {
+  color: hsl(278, 94%, 30%);
 }
 
 .visually-hidden {

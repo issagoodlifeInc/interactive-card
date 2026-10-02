@@ -1,5 +1,4 @@
 const form = document.querySelector("#card-form");
-const formPanel = document.querySelector(".form-panel");
 const thanks = document.querySelector(".thanks");
 const fields = {
   name: document.querySelector("#name"),
