@@ -204,6 +204,7 @@ form label {
 .thanks {
   display: none;
   text-align: center;
+  margin: 0 auto;
 }
 
 .thanks__title {

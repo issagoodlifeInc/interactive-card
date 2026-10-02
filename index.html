@@ -62,6 +62,7 @@
           placeholder="e.g. Jane Appleseed"
           onfocus="this.placeholder=''"
           onblur="this.placeholder='e.g. Jane Appleseed'"
+          oninput="getName()"
         />
 
         <small class="error err-name">Cant be blank</small>
@@ -74,6 +75,8 @@
           placeholder="e.g. 1234 5678 9123 0000"
           onfocus="this.placeholder=''"
           onblur="this.placeholder='e.g. 1234 5678 9123 0000'"
+          maxlength="19"
+          pattern="/^[0-9 ]{19}$/"
         />
 
         <small class="error err-number">Cant be blank</small>
@@ -90,7 +93,7 @@
             onblur="this.placeholder='MM'"
             min="01"
             max="12"
-            required
+            pattern="/^[0-9]{2}$/"
             id="expiryMonth"
             placeholder="MM"
           />
@@ -102,6 +105,7 @@
             onblur="this.placeholder='YY'"
             min="00"
             max="99"
+            pattern="/^[0-9]{2}$/"
             id="expiryYear"
             placeholder="YY"
           />
@@ -111,8 +115,9 @@
             name="cvc"
             id="cvc"
             placeholder="e.g. 123"
-            min="0"
+            min="000"
             max="999"
+            pattern="/^[0-9]{3}$/"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='e.g. 123'"
           />
@@ -131,7 +136,10 @@
 
       <section class="thanks">
         <img src="./assets/images/icon-complete.svg" alt="tick" />
-        <h1 class="thanks__title">Thank you!</h1>
+        <h1 class="thanks__title">
+          Thank you! <br />
+          <span></span>
+        </h1>
         <p class="thanks__body">We've added your card details</p>
         <button class=" btn btn__thanks">Continue</button>
       </section>

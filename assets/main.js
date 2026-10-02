@@ -26,10 +26,13 @@ let thanksSection = document.querySelector(".thanks");
 let confirmBtn = document.querySelector(".btn__submit");
 let continueBtn = document.querySelector(".btn__thanks");
 
-inputName.addEventListener("keyup", () => {
+let you = document.querySelector(".thanks__title span");
+
+inputName.addEventListener("input", () => {
   cardName.textContent = inputName.value;
+  you.textContent = inputName.value;
 });
-inputCardNum.addEventListener("keyup", () => {
+inputCardNum.addEventListener("input", () => {
   cardNumber.textContent = inputCardNum.value
     .replace(/[^0-9]/gi, "")
     .replace(/(.{4})/g, "$1 ")
@@ -43,4 +46,19 @@ inputYear.addEventListener("keyup", () => {
 });
 inputCVC.addEventListener("keyup", () => {
   cardCVC.textContent = inputCVC.value;
+});
+
+formSection.addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+
+confirmBtn.addEventListener("click", () => {
+  thanksSection.style.display = "block";
+  formSection.style.display = "none";
+});
+
+continueBtn.addEventListener("click", () => {
+  thanksSection.style.display = "none";
+  formSection.style.display = "block";
+  formSection.reset();
 });
