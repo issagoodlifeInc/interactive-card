@@ -46,7 +46,7 @@ Mobile Size view of the mockup: -
 ### Links
 
 - Solution URL: [GH Link](https://github.com/issagoodlifeInc/interactive-card.git)
-- Live Site URL: [GH Pages Link](https://your-live-site-url.com)
+- Live Site URL: [Live Netlify Deploy](https://interactivecardlk.netlify.app/)
 
 ## My process
 
@@ -75,20 +75,48 @@ This is a front-end challenge demo only. It does not send, store, or process pay
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+My understanding on how to handle interactive elements.
 
+```js
+function updateCard() {
+  const digits = fields.number.value.replace(/\D/g, "").slice(0, 16);
+  fields.number.value = digits.replace(/(\d{4})(?=\d)/g, "$1 ");
+  card.number.textContent = digits
+    ? digits.replace(/(\d{4})(?=\d)/g, "$1 ")
+    : "0000 0000 0000 0000";
+
+  const name = fields.name.value.trim();
+  card.name.textContent = name || "Jane Appleseed";
+  card.month.textContent = fields.month.value || "00";
+  card.year.textContent = fields.year.value || "00";
+  card.cvc.textContent = fields.cvc.value || "000";
+}
+
+```
+
+<!-- Dynamic event listener -->
+```js
+
+  Object.values(fields).forEach((input) => {
+  input.addEventListener("input", () => {
+    if (input === fields.month || input === fields.year || input === fields.cvc) {
+      input.value = input.value.replace(/\D/g, "").slice(0, input === fields.cvc ? 3 : 2);
+    }
+    updateCard();
+    if (submitted) validate();
+  });
+});
+
+```
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
+- Github Copilot
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Lesley Kimutai Portfolio](https://lesleykimutai.netlify.app/)
+- Frontend Mentor - [@Leskim](https://www.frontendmentor.io/profile/Leskim)
 
 
 ## Acknowledgments
