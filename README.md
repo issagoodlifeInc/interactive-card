@@ -59,25 +59,18 @@ Mobile Size view of the mockup: -
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- Rebuilt the form markup with associated labels, accessible error-message regions, suitable autocomplete/input modes, and a dedicated success state.
+- Connected all five inputs to the card preview so the name, grouped card number, expiry, and CVC update while typing. Empty fields show the design's default card details.
+- Added submit-time validation for required values, a 16-digit card number, a month from 01 to 12 and two-digit year, and a three-digit CVC. Errors are announced through each field's accessible description and clear as corrected values are entered.
+- Added a completion screen after valid submission. **Continue** resets the form, errors, and preview so another card can be entered.
+- Reworked the layout for desktop and mobile, with overlapping cards on small screens, plus hover, active, keyboard-focus, and reduced-motion styles.
 
-To see how you can add code snippets, see below:
+## How it works
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+`index.html` contains the card preview, form, and completion view. `assets/main.js` listens for input events to sanitize numeric fields and update the preview; on submission it validates the values and switches to the completion view only when all fields pass. The Continue button resets the form and restores the default preview. `assets/styles.css` provides the desktop/mobile layouts, visual states, and error styling.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+This is a front-end challenge demo only. It does not send, store, or process payment information.
+
 
 
 ### Continued development
@@ -100,4 +93,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+Github Copilot -- helped me finish this challenge; had put it off for quite a while
